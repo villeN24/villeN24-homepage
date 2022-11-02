@@ -1,20 +1,17 @@
 import { useState } from 'react'
-import {Routes, Route, Link} from "react-router-dom"
-import Certificates from './pages/Certificates'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
+import {Routes, Route} from "react-router-dom"
+import Certificates from './pages/Certificates/Certificates'
+import Home from './pages/Home/Home'
+import Projects from './pages/Projects/Projects'
+
+import styles from "./App.module.css"
+import NavBar from './components/NavBar'
 
 function App() {
 
   return (
-    <div className="App">
-      <nav>
-        <div>
-          <Link to="/">Home</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/certificates">Certificates</Link>
-        </div>
-      </nav>
+    <div className={styles.app}>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
