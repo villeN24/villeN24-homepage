@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import {Routes, Route} from "react-router-dom"
-import Certificates from './pages/Certificates/Certificates'
-import Home from './pages/Home/Home'
-import Projects from './pages/Projects/Projects'
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Certificates from './pages/Certificates/Certificates';
+import Home from './pages/Home/Home';
+import Projects from './pages/Projects/Projects';
 
-import styles from "./App.module.css"
-import NavBar from './components/NavBar'
+import styles from './App.module.css';
+import NavBar from './components/NavBar';
 
 function App() {
-
   return (
     <div className={styles.app}>
       <NavBar />
@@ -18,7 +17,7 @@ function App() {
         <Route path="/certificates" element={<Certificates />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
